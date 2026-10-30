@@ -1,0 +1,120 @@
+/* Custom CSS Styles for GÓMEZ & HIJOS - Minimalist Executive Style (Azul Aciano) */
+
+:root {
+    --theme-primary: #2563eb;       /* Azul Aciano 600 */
+    --theme-hover: #1d4ed8;         /* Azul Aciano 700 */
+    --theme-light: #eff6ff;         /* Azul Aciano 50 */
+    --theme-border: #bfdbfe;        /* Azul Aciano 200 */
+    --theme-dark: #1e40af;          /* Azul Aciano 800 */
+    --theme-ring: rgba(37, 99, 235, 0.4);
+}
+
+/* Enforce WhatsApp Icon & Floating Button Official Green */
+.btn-whatsapp-green {
+    background-color: #25D366 !important;
+    color: #ffffff !important;
+}
+
+.btn-whatsapp-green:hover {
+    background-color: #128C7E !important;
+}
+
+.text-whatsapp-green {
+    color: #25D366 !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dynamic Theme Utilities */
+.btn-primary-theme {
+    background-color: var(--theme-primary) !important;
+    color: #ffffff !important;
+}
+
+.btn-primary-theme:hover {
+    background-color: var(--theme-hover) !important;
+}
+
+.text-theme-primary {
+    color: var(--theme-primary) !important;
+}
+
+.bg-theme-light {
+    background-color: var(--theme-light) !important;
+}
+
+.border-theme-border {
+    border-color: var(--theme-border) !important;
+}
+
+.badge-theme {
+    background-color: var(--theme-light) !important;
+    border-color: var(--theme-border) !important;
+    color: var(--theme-dark) !important;
+}
+
+/* Timeline Custom Connectors */
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0.6rem;
+    top: 1.5rem;
+    bottom: -1rem;
+    width: 2px;
+    background-color: #334155;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+/* Pulsing Badge for Urgent Client Signatures */
+@keyframes pulse-subtle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.85;
+        transform: scale(1.02);
+    }
+}
+
+.badge-urgent {
+    animation: pulse-subtle 2s infinite ease-in-out;
+}
+
+/* Quiz Option Active Styles */
+.quiz-btn-selected {
+    background-color: var(--theme-primary) !important;
+    border-color: var(--theme-border) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 12px var(--theme-ring);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
